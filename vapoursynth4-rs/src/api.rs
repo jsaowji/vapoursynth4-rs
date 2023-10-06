@@ -8,7 +8,7 @@ use std::sync::atomic::{AtomicPtr, Ordering};
 
 use crate::ffi;
 
-use self::error::ApiNotFound;
+//use self::error::ApiNotFound;
 
 pub(crate) static mut API: Option<AtomicPtr<ffi::VSAPI>> = None;
 
@@ -20,7 +20,7 @@ pub(crate) fn api() -> &'static ffi::VSAPI {
             .load(Ordering::Acquire)
     }
 }
-
+/*
 /// # Errors
 ///
 /// Return [`ApiNotFound`] if the requested API is not found.
@@ -54,7 +54,7 @@ pub fn set_api(major: u16, minor: u16) -> Result<(), ApiNotFound> {
         Ok(())
     }
 }
-
+*/
 pub(crate) unsafe fn set_api_from_raw(ptr: *const ffi::VSAPI) {
     API.replace(AtomicPtr::new(ptr.cast_mut()));
 }

@@ -17,6 +17,6 @@ fn main() {
     }
 
     // Handle linking to VapourSynth libs.
-    println!("cargo:rustc-link-lib=vapoursynth");
-    println!("cargo:rustc-link-lib=vapoursynth-script");
+    //println!("cargo:rustc-link-lib=vapoursynth");
+    //println!("cargo:rustc-link-lib=vapoursynth-script");
 }

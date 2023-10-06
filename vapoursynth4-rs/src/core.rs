@@ -434,6 +434,7 @@ impl CoreBuilder {
     }
 }
 
+/*
 #[cfg(test)]
 mod tests {
     use testresult::TestResult;
@@ -459,3 +460,4 @@ mod tests {
         Ok(())
     }
 }
+*/

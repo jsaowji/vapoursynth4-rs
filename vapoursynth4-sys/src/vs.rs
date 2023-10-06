@@ -551,8 +551,8 @@ pub enum VSCacheMode {
     ForceEnable = 1,
 }
 
-/// Core entry point
-pub type VSGetVapourSynthAPI = unsafe extern "system" fn(version: c_int) -> *const VSAPI;
+///// Core entry point
+//pub type VSGetVapourSynthAPI = unsafe extern "system" fn(version: c_int) -> *const VSAPI;
 
 // SECTION - Plugin, function and filter related
 /// User-defined function called by the core to create an instance of the filter.
@@ -2145,6 +2145,7 @@ pub struct VSAPI {
 }
 // !SECTION
 
+/*
 extern "system" {
     /// Returns a pointer to the global [`VSAPI`] instance.
     ///
@@ -2153,7 +2154,7 @@ extern "system" {
     /// It is recommended to pass [`VAPOURSYNTH_API_VERSION`]
     pub fn getVapourSynthAPI(version: c_int) -> *const VSAPI;
 }
-
+*/
 #[cfg(test)]
 mod tests {
     use super::*;

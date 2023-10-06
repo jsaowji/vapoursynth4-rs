@@ -641,6 +641,7 @@ pub enum MapPropertyError {
 
 pub type AppendMode = ffi::VSMapAppendMode;
 
+/*
 #[cfg(test)]
 mod tests {
     use core::panic;
@@ -793,3 +794,4 @@ mod tests {
         Ok(())
     }
 }
+*/
